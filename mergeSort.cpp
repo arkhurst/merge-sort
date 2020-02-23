@@ -11,7 +11,7 @@ int merge( int arr [], int leftLowerValue, int leftHigherValue, int rightLowerVa
 	int left = leftLowerValue;
 	int right = rightLowerValue;
 	
-	for (int i = 0; i < length; i++){
+	for (int i = 0; i < length; ++i){
 		if(left > leftHigherValue){
 			temp[i] = arr[right++];
 		}else if ( right > rightHigherValue){
@@ -25,19 +25,10 @@ int merge( int arr [], int leftLowerValue, int leftHigherValue, int rightLowerVa
 	}
 	
 
-	for (int i=0; i<length; i++)
-	   arr[leftLowerValue] = temp[i];
+	for (int i=0; i<length; ++i)
+	   arr[leftLowerValue++] = temp[i];
 }
 
-  int printArray (int arr[], int length){
-    int i;
-    for (i=0; i < length; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-
-  }	
   
   int mergeSort ( int arr[], int lower, int higher) {
 	if(lower >= higher){
@@ -50,17 +41,31 @@ int merge( int arr [], int leftLowerValue, int leftHigherValue, int rightLowerVa
 	}
 }
 
-//taking a given value of arrays  int arr[] = {32, 45, 89, 5, 47};
+
+  int printArray (int arr[], int length){
+    int i;
+    for (i=0; i < length; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+  }	
+
+//taking a given value of arrays  int arr[] = {};
 int main(){
-	 int array[] = {1,3,5,8,2,4};
-	 int length = 6  ;
+	 int arr[] = {1,0,3,4,5};
+	 int length = 5 ;
   
    printf("Given array: \n");
-   printArray(array,length);
-    
-   mergeSort(array, 0, length - 1);
+   printArray(arr,length);
      
     printf("\nSorted array: \n");
-    printArray(array, length);
+     mergeSort(arr, 0, length - 1);
+     cout<<"The Sorted List is\n";
+    for(int i=0;i<length;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
     return 0;
 }
