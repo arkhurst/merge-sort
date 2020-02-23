@@ -1,6 +1,6 @@
 #include <bits/stdc++.h> 
 using namespace std; 
-//implementing merge sort in c++
+//implementing merge sort 
 
 void mergeSort ( int arr[], int lower, int higher) {
 	if(lower >= higher){
