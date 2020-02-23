@@ -1,0 +1,10 @@
+From Binary search, whenever we divide a number into two,
+it can be represented as "log n" and number of steps represented as
+"log n + 1".
+Merge sort also uses the divide and conquer approach, and to merge
+the subarrays, made by dividing the original array of "n" elements,
+a running time of O(n) is required.
+
+Hence the total time for MergeSort function will become "n(log n + 1)",
+which gives us a time complexity of O(n*logn)
+
