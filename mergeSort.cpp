@@ -1,3 +1,5 @@
+#include <bits/stdc++.h> 
+using namespace std; 
 //implementing merge sort in c++
 
 void mergeSort ( int arr[], int lower, int higher) {
